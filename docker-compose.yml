@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  pyzilla_server:
+    build:
+      args: 
+        user: root
+        uid: 0
+      context: ./
+      dockerfile: Dockerfile
+    container_name: pyzilla_server
+
+  
+  # db
+
+  # nginx
+
+
+networks:
+  web_py:
+    driver: bridge
