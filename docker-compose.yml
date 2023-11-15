@@ -9,6 +9,12 @@ services:
       context: ./
       dockerfile: Dockerfile
     container_name: pyzilla_server
+    working_dir: /var/www/
+    ports:
+      - 9600:80
+    networks:
+      - web_vowe
+    command: sh ./pyzilla_server/start.sh
 
   
   # db
